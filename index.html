@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPMS - Manchetser</title>
+<!-- Bootstrap -->
+<link href="CSS/bootstrap-4.3.1.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS/main.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<style>
+	/* The Overlay (background) */
+	.overlay {
+	  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+	  height: 100%;
+	  width: 0;
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  left: 0;
+	  top: 0;
+	  background-color: rgb(0,0,0); /* Black fallback color */
+	  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+	  overflow-x: hidden; /* Disable horizontal scroll */
+	  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	}
+
+	/* Position the content inside the overlay */
+	.overlay-content {
+	  position: relative;
+	  top: 25%; /* 25% from the top */
+	  width: 100%; /* 100% width */
+	  text-align: center; /* Centered text/links */
+	  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+	  color: aliceblue;
+	}
+
+	/* The navigation links inside the overlay */
+	.overlay a {
+	  padding: 8px;
+	  text-decoration: none;
+	  font-size: 36px;
+	  color: #818181;
+	  display: block; /* Display block instead of inline */
+	  transition: 0.3s; /* Transition effects on hover (color) */
+	}
+
+	/* When you mouse over the navigation links, change their color */
+	.overlay a:hover, .overlay a:focus {
+	  color: #f1f1f1;
+	}
+
+	/* Position the close button (top right corner) */
+	.overlay .closebtn {
+	  position: absolute;
+	  top: 20px;
+	  right: 45px;
+	  font-size: 60px;
+	}
+	
+	.navbar {
+		background-image: url('images/54.JPG');
+	}
+
+	/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+	@media screen and (max-height: 450px) {
+	  .overlay a {font-size: 20px}
+	  .overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	  }
+	}	
+</style>
+</head>
+<body>
+	<!-- The overlay -->
+	<div id="myNav" class="overlay">
+
+	  <!-- Button to close the overlay navigation -->
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+	  <!-- Overlay content -->
+	  <div class="overlay-content">
+		  <span>MOUIN OMARI B2QZ3H1R @Wilmslow Park,Manchester</span><br>
+		  <span>GERALDINE McKENNA B7QZ2H5R @OCP Manchester </span><br>
+		  <span>PATRICK SHAW B2QZ0H5R@ Castlefield,Manchester </span><br>
+		  <span>LAURA ANNE JAMES B1QZ1H2R @ Castlefield,Manchester </span><br>
+		  <span>VICTORIA LEE B9QZ9G2G@Castlefield,Manchester </span><br>
+		  <span>JULIE SOBUTTS B2QZ2K6X @ Alto apartments Salford</span><br>
+		  <span>COSKIN CETIN B2QZ2K4X @Wilmslow park,Manchester </span><br>
+		  <span>HAYLEY FRANCES WALSH B7QZ9K7Z Castlefield,Manchester </span><br>
+		  <span>MOHAMMEDHUSSAIN B7QZ9K5Z @Deakins park,Bolton </span><br>
+		  <span>THOMAS LlOYD B2QZ5K6X @Wilmslow park,Manchester </span><br>
+		  <span>LOUISE FITZIMMONS C5QZ9939 @ Castlefield,Manchester </span><br>
+		  <span>POI NANG YE C6QZ2432 @ Wilmslow Park Manchester </span><br>
+		  <span>MOHD TAJUDDIN C6Qz2450 @ Wilmslow Park,Manchester </span><br>
+		  <span>NATHAN McDONNELL C6QZ2454 @ Wilmslow Park</span><br>
+		  <span>SIMON LYONS C8QZ3451 @ Orient House,Manchester </span><br>
+		  <span>JOSHUA GRAHAM C9QZ3684 @Picadilly Parking</span><br>
+		  <span>BRYONY SMITH C9QZ3668 @Taylors Electrics</span><br>
+		  <span>SHELON MADIRE C9QZ4940 @Wilmslow Park,Manchester </span><br>
+		  <span>MATHEW LOCKLEY C5QZ268A @st Christopher house stockpot </span><br>
+		  <span>DAN PHILIPS C5QZ290A @st Christopher house Stockport </span><br>
+		  <span>MICHAEL BAGNALL C5QZ320A @ st Christopher house Stockport </span><br>
+		  <span>FERGUS MULCRONE C8QZ794E @Hill Quays Manchester </span><br>
+		  <span>RASHED SHAWKEY C3QZ228F @ Jacksons warehouse Manchester </span><br>
+		  <span>ANGELA HENDERSON C6QZ711E @st Christopher house Stockport </span><br>
+		  <span>CODY MULCAIR C6QZ907E @st Christopher house Stockport </span><br>
+		  <span>JONATHAN POLL C3QZ261F @jacksons warehouse Manchester </span><br>
+		  <span>SAMANTHA WILLOWS C6QZ673E @ st Christopher house Stockport </span><br>
+		  <span>JONATHAN HALLIWELL C0QZ137M @deakins park Bolton </span><br>
+		  <span>ANDREW MORGAN B5WZ20DOZ @deakins park Bolton </span><br>
+		  <span>AISHA BABA C0QZ470M @Deakins Park Bolton</span><br>
+		  <span>COWGILL HOLLOWAY ACCOUNTANTS C0QZ105M@ Deakins Park Bolton </span><br>
+		  <span>DANIELLE AMOS C0QZ483M @Deakins Park Bolton </span><br>
+		  <span>MICHELLE BRANDWOOD C0QZ251M @Deakins Park Bolton</span><br>
+		  <span>MARIAH BOON C3QZ583J@ Wilmslow Park Manchester </span><br>
+		  <span>EDWARD KIRKO C3QZ588J @ Andrews Autos Manchester </span><br>
+		  <span>JOSHUA RILEY C0QZ177M @ Deakins Park Bolton </span><br>
+		  <span>PAUL ANDREWS C0QZ493M @ Deakins Park Bolton </span><br>
+		  <span>JOHN BYRN B2QZ6K7X @ Deakins park Bolton</span><br>
+		  <span>VICTORIA BANNON C7QZ479X @ Slate Wharf Manchester </span><br>
+		  <span>JADE KENNEDY C5QZ214A @ Venice street Manchester</span><br> 
+		  <span>KARL NAUGHTON C7QZ958V@Wilderspool Park Warrington </span><br>
+		  <span>MICHELLE JONES C8WZ2165V @ Wilderspool Park Warrington </span><br>
+		  <span>JAMES ALEXANDER WARD C9QZ495O @ Cube apartments Manchester </span><br>
+		  <span>LEON WHITE C3QZ25C4 @ Jacksons warehouse Manchester </span><br>
+		  <span>CHELSEA FIELDS B7QZ942 @ Alto Apartments Salford</span><br>
+		  <span>CAMERON BROWN C5QZ435T @ Victoria Halls Manchester </span><br>
+		  <span>BENJAMIN ALAIMO C5QZ451T @ Wilmslow Park Manchester</span><br> 
+		  <span>SAMANTHA PORTER C5QZ567T @ Briarfields Halls Manchester</span><br>
+		  <span>LAUREN WRIGHT C5QZ588T @ Victoria Halls Manchester </span><br>
+		  <span>ALICIA SHEKONI C5QZ609T @ Manchester Tech Centre </span><br>
+		  <span>KAYLEIGH POLHILL C8QZ125V @ Wilderspool Park Warrington </span><br>
+		  <span>MUSTAPHA AHMAD C3QZ07C4 @ Jacksons warehouse Manchester </span><br>
+		  <span>Sarah Jerath NV building Salford Quays</span><br>
+		  <span>Oliver McClean NV building Salford Quays</span><br>
+		  <span>Sonia Ditta Hill Quays Manchester </span><br>
+		  <span>Jason Nolan Wilmslow park Manchester </span><br>
+		  <span>Damian Brooke's Deakins park Bolton </span><br>
+		  <span>Jamie Little Deakins park Bolton </span><br>
+		  <span>DMS Reprographics Deakins park Bolton</span><br>
+		  <span>Alison Austin NV building Salford Quays</span><br>
+		  <span>Status Global Group NV building Salford Quays</span><br>
+		  <span>Scott Summerfield Victoria Halls Manchester </span><br>
+		  <span>Catherine Young Melrose apartments Manchester </span><br>
+		  <span>Geoffrey Sharpe Anchorage Quay Salford Quays</span><br>
+		  <span>Samuel Adepoyigi NV building Salford Quays</span><br>
+		  <span>Stanley Wright Deakins park Bolton </span><br>
+		  <span>Timothy Johnson Deakins park Bolton </span><br>
+		  <span>Aaron Ashworth Deakins park Bolton </span><br>
+		  <span>Rashes Shawkey Jacksons warehouse Manchester</span><br> 
+		  <span>Hadi Ahmad Jacksons warehouse Manchester </span><br>
+		  <span>Leon White Jacksons warehouse Manchester </span><br>
+		  <span>Georgia Brogden Jacksons warehouse Manchester </span><br>
+		  <span>Chelsea-Lea Fekete Jacksons warehouse Manchester</span><br> 
+		  <span>Abida Naqvi Jacksons warehouse Manchester</span>
+	  </div>
+
+	</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" style="margin: 0px 20px 0px 20px; "> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+	  <li class="nav-item" style="margin: 0px 20px 0px 20px;"><a class="nav-link" href="#services">Services</a></li>
+      <li class="nav-item" style="margin: 0px 20px 0px 20px; "> <a class="nav-link" href="#contact">Contact</a></li>		
+    </ul>
+  </div>
+	<a class="navbar-brand" href="#"><img	src="images/footer-logo.png" alt="CPMS logo"></a>
+</nav>
+<section>
+  <div class="jumbotron text-center mt-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Car Park Management Services Ltd</h1>
+          <p>PROFESSIONAL SOLUTIONS FOR ALL PARKING PROBLEMS</p>
+          CPMS are here to help businesses and organisations across Greater Manchester provide secure parking for visitors, customers and staff</p>
+		  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>DON'T PUT UP WITH UNAUTHORISED PARKING</h1>
+        <p>Take control of your parking areas with CPMS Manchester. We can ensure that your car parks are properly staffed and maintained, issuing parking charge notices to vehicles using your parking area without authorisation.with patrols for security and general maintanance of your car park needs.</p>
+		<p>With CPMS Manchester, you can ensure that there's always parking space available for your staff, visitors and customers.</p>
+		<p>For public and private parking areas in Greater Manchester, CPMS are here to help you keep control of who uses your car parks.</p>
+		<p>We can also source and install telescopic barriers,fob entry barriers and pay and display machines,PARKING MANGEMENT is what we do best,we have many distinguished clients in the manchester area.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-5 col-12">
+        <ul class="list-unstyled">
+          <li class="media"> <img src="images/image03.jpg" alt="PCN" height="397" class="mr-3"></li>
+        </ul>
+      </div>
+	<div class="col-md-6 col-12">
+        <ul class="list-unstyled">
+          <li class="media">
+            <div class="media-body">
+              <h3 class="mt-0 mb-1">Parking Charge Notices</h3>
+				<br>
+              <p>CPMS work across the Greater Manchester area, helping our customers keep their car parks secure and effectively managed. In 2015 we have started to issue court summons against motorists who don't pay their parking charge notice (PCN). This is proving to be very effective and since the court of appeal ruling BEAVIS V PARKING EYE on the 22/04/2015 and the upholding of that decision by the supreme court 4/11/15 we are now in the process of issue a substantial amount more. This should benefit our clients in the near future as word spreads that the PCNs we issue are enforceable.</p>
+			<p><a href="#media" onClick="openNav()">Click here to view recent cases we have won</a></p>
+			</div>
+          </li>
+        </ul>
+      </div>
+	</div>
+	  <hr id="divider">
+	 <div class="row">
+      <div class="col-md-5 col-12">
+        <ul class="list-unstyled">
+          <li class="media"> <img src="images/lhs-image.jpg" alt="Multistorey" width="288" height="386" class="mr-3"></li>
+        </ul>
+      </div>
+	 <div class="col-md-6 col-12" id="services">
+        <ul class="list-unstyled">
+          <li class="media">
+            <div class="media-body">
+              <h3 class="mt-0 mb-1">Clients</h3><br>
+				<p>Our Car Parking Management Service is ideal for both Private and Corporate clients.</p>
+				 <p>We cover Manchester and the surrounding areas with over 150 Car Parks/Developments, in and around the city centre.</p>
+				<p><strong>We offer our clients ANPR and CCTV to control and montior car parks</strong></p>
+				<p>All unpaid charges are followed up by using Debt Recovery Plus Ltd</p>
+		  		<p>If legal action is required<span>B W Legal Solicitors</span> are used to reclaim 
+					those unpaid charges</p>
+			</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>	
+</section>
+<section id="clients">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>What our clients say</h2>
+        <p>CPMS have provided effective and efficient car park management at several of the properties that we manage. We had a major issue with unauthorised vehicles parking on our clients land prior to CPMS coming on board. Their operation has been hugely successful in ensuring that only customers and staff use the car parks. I would recommend Paul and rest of the team at CPMS to any other companies requiring this type of service</p>
+		<p>- Touchstone Residential</p>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-12 text-center" style="border-right: 1px solid black;"> 
+        <h4>We have used CPMS for a number of years and have always been happy with excellent service they provide. The service is friendly and reliable and we would not hesitate to recommend them.</h4>
+		<p>- Frathouse</p>
+      </div>
+      <div class="col-md-6 col-12 text-center mt-md-0 mt-2"> 
+        <h4>We have been using CPMS for over 2 years at the Green Quarter. They have are a very professional outfit and understand our needs and offer a fantastic service. They monitor all our estate and car parks and Paul will always speak with myself before they give any tickets out. All in all a very friendly and professional service.</h4> 
+		<p>-The Livingcity group</p>
+      </div>
+    </div>
+    <hr>
+	<div class="row">
+		<div class="col-12 text-center">
+			<p>CPMS provide a first class service and we are proud to have them as part of our team. Paul is attentive and has a strong work ethic; he has extensive knowledge of parking rules and regulations and uses this knowledge to deliver an efficient and robust service.</p>
+			<p>Undoubtedly, CPMS is business that has grown on longevity and a trust from its customers and we would not hesitate in recommending them.</p>
+			<p>- Castle Field Estates</p>
+		</div>  
+	</div>
+</div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>GDPR POLICY</h1>
+        <p>Car Park Management Services (cpms)ltd may obtain your personal details including the vehicle registration number, name and address from the DVLA after 28 days of non payment of a parking charge notice.</p>
+        <p>Where enforcement action is necessary, your details may be passed on to our debt recovery companies and/or solicitors should we need to  pursue any outstanding charges.  If enforcement action is necessary  there may be additional charges which will be added onto the outstanding balance. </p>
+		<p>We are compliant with the  requirements on data release by the DVLA, we  only process/store  information for the purposes for which it was obtained and in accordance with data protection laws.</p>
+		<p>If you feel that you have a right to object under the GDPR regulations then you can contact us with your concern.</p><i class="fa fa-envelope"></i> <a href="mailto:dop@cpmsmanchester.com">dpo@cpmsmanchester.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="background_image">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" id="left">
+        <h3 class="text-center">CAR PARK MANAGEMENT FOR MANCHESTER</h3>
+        <p> CPMS work across the Greater Manchester area, helping businesses and organisations deter rogue parkers, keeping their parking areas secure and reserved for visitors, customers and staff.</p>
+         <p>If your parking area is becoming a target for people looking for a convenient place to park to avoid congestion,and paying at a regular car parkCPMS Manchester have the right solution for you.</p>
+         <p>Signs can be individually adapted to suit each new clients needs and are supplied along with permits at no cost to yourselves.</p>
+         <p>You don't need to put up with unauthorised parking - take back control of your car park with CPMS Manchester today.</p>
+      </div>
+      <div class="col-md-4" id="mid">
+		  <div>
+		  	<h3 class="text-center">THE CPMS TEAM</h3>
+			  <p>CPMS Manchester are a professional team, helping companies and organisations across the Greater Manchester area keep their parking areas safe and secure from rogue parkers.</p>
+			  <p>We are members of the Independent Parking Committee, and have over 22 years of experience, ensuring that all our clients receive the high standard of service they deserve.</p>
+			  <p>Our client list includes hotels and residential buildings, property management companies and local businesses.</p>
+			  <p>To find out more about securing your car park against unauthorised parking, get in touch with CPMS Manchester today.</p>
+		  </div>
+		  <hr>
+		  <div>
+			<h3 class="text-center">GET IN TOUCH</h3>
+			<address class="text-center" id="contact">
+				<strong>Car Park Management Services Ltd</strong><br>
+				Department 142<br>
+				19 Lever Street<br>
+				Manchester<br>
+				M1 1AN<br><br>
+				<abbr title="Phone"><i class="fa fa-phone"></i></abbr> 0161 274 4447 <br>
+				<abbr title="Email"><i class="fa fa-envelope"></i></abbr> <a href="mailto:info@cpmsmanchester.com">info@cpmsmanchester.com</a>
+				<br><div><hr>
+				<strong>Automated Payment Line</strong><br><i class="fa fa-phone"></i> 0844 848 1410
+				<hr>
+				</div>
+			</address>
+		  </div>
+	 </div>
+      <div class="col-md-4" id="right">       
+        <form class="form_container" name="enquiry" onsubmit="return validateForm()" method="POST">
+          <div class="form-group col-12">
+			  <fieldset>
+				 <legend>ENQUIRY</legend>
+			  	<hr>
+			    <label for="fullname">Full Name</label>
+				<input type="text" id="fname" name="fullname" placeholder="Your full Name..">
+
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder="Enter Email..">
+
+				<label for="tel">Telephone</label>
+				<input type="tel" id="tel" name="tel" placeholder="Enter your Telephone Number..">
+			  	
+			  	<label for="company">Company</label>
+				<input type="text" id="company" name="company" placeholder="Enter your Company Name..">
+
+				<label for="enquiry">Enquiry</label>
+				<textarea id="enquiry" name="enquiry" placeholder="Your Enquiry.." style="height:100px"></textarea>
+				
+			  	<button type="submit" class="btn btn-dark mt-2">Enquire</button>
+			</fieldset>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p>Copyright 2020 © Car Park Management Services Ltd Manchester. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.3.1.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.3.1.js"></script>
+<script>
+	/* Open when someone clicks on the span element */
+	function openNav() {
+  		document.getElementById("myNav").style.width = "100%";
+	}
+
+	/* Close when someone clicks on the "x" symbol inside the overlay */
+	function closeNav() {
+		document.getElementById("myNav").style.width = "0%";
+	}
+	
+	function validateForm() {
+	  var x = document.forms["enquiry"]["fulllname"].value;
+      var y = document.forms["enquiry"]["email"].value;
+      var z = document.forms["enquiry"]["company"].value;
+      var a = document.forms["enquiry"]["tel"].value;
+      var b = document.forms["enquiry"]["enquiry"].value;
+	  if (x == "" || y == "" || z == "" || a == "" || b == "" ) {
+		alert("Field must be filled out");
+		return false;
+	  }
+	  if (!y.contains('@')){
+		  alert("Enter a valid email address");
+		  return false;
+	  }
+	  if(a.length < 11){
+		  alert("Must enter a number with 11 digits");
+	  }
+	}
+</script>
+</body>
+</html>
