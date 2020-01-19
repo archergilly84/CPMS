@@ -326,25 +326,25 @@
 		  </div>
 	 </div>
       <div class="col-md-4" id="right">       
-        <form class="form_container" name="enquiry" onsubmit="return validateForm()" method="POST">
+        <form class="form_container" name="enquiry_form" method="post" action="enquiry.php">
           <div class="form-group col-12">
 			  <fieldset>
 				 <legend>ENQUIRY</legend>
 			  	<hr>
-			    <label for="fullname">Full Name</label>
-				<input type="text" id="fname" name="fullname" placeholder="Your full Name..">
+			    <label for="fullname">Full Name</label><span class="required">*</span>
+				<input type="text" id="fname" name="fullname" placeholder="Your full Name.." maxlength="30" required>
 
-				<label for="email">Email</label>
-				<input type="email" id="email" name="email" placeholder="Enter Email..">
+				<label for="email">Email</label><span class="required">*</span>
+				<input type="email" id="email" name="email" placeholder="Enter Email.." required>
 
-				<label for="tel">Telephone</label>
-				<input type="tel" id="tel" name="tel" placeholder="Enter your Telephone Number..">
+				<label for="tel">Telephone</label><span class="required">*</span>
+				<input type="tel" id="tel" name="tel" placeholder="Enter your Telephone Number.." maxlength="11" required>
 			  	
 			  	<label for="company">Company</label>
 				<input type="text" id="company" name="company" placeholder="Enter your Company Name..">
 
-				<label for="enquiry">Enquiry</label>
-				<textarea id="enquiry" name="enquiry" placeholder="Your Enquiry.." style="height:100px"></textarea>
+				<label for="enquiry">Enquiry</label><span class="required">*</span>
+				<textarea id="enquiry" name="enquiry" placeholder="Your Enquiry.." style="height:100px" maxlength="255" required></textarea>
 				
 			  	<button type="submit" class="btn btn-dark mt-2">Enquire</button>
 			</fieldset>
@@ -378,26 +378,8 @@
 	/* Close when someone clicks on the "x" symbol inside the overlay */
 	function closeNav() {
 		document.getElementById("myNav").style.width = "0%";
-	}
+	}	
 	
-	function validateForm() {
-	  var x = document.forms["enquiry"]["fulllname"].value;
-      var y = document.forms["enquiry"]["email"].value;
-      var z = document.forms["enquiry"]["company"].value;
-      var a = document.forms["enquiry"]["tel"].value;
-      var b = document.forms["enquiry"]["enquiry"].value;
-	  if (x == "" || y == "" || z == "" || a == "" || b == "" ) {
-		alert("Field must be filled out");
-		return false;
-	  }
-	  if (!y.contains('@')){
-		  alert("Enter a valid email address");
-		  return false;
-	  }
-	  if(a.length < 11){
-		  alert("Must enter a number with 11 digits");
-	  }
-	}
 </script>
 </body>
 </html>

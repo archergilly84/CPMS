@@ -120,15 +120,8 @@ address div {
 	padding: 5px;
 }
 
-.services {
-	background-image: url("../images/39.JPG");
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;	
-}
-
-.services h3 {
-	color: #72323f;
+.required {
+	color: red;
 }
 
 
